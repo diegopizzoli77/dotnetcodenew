@@ -1,0 +1,19 @@
+﻿@typeparam T
+
+<div class="container">
+    <div class="row">
+        @GridColumnHeader
+    </div>
+   
+    @foreach (var elem in GridItems)
+    {
+    <div class="row rowContent">
+        @GridRow(elem)
+    </div>
+    }
+           
+    <div class="row">
+        @GridFooter
+    </div>
+</div>
+

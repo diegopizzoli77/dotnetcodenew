@@ -1,0 +1,39 @@
+﻿@using BlazorExample.Components
+@using BlazorExample.Models
+
+<GridTemplate T="InvoiceRow" GridItems="InvoiceRows">
+    <GridColumnHeader>
+        <div class="col">
+            <b>ID</b>
+        </div>
+        <div class="col">
+            <b>Description</b>
+        </div>
+        <div class="col">
+            <b>Qta</b>
+        </div>
+        <div class="col">
+            <b>Price</b>
+        </div>
+    </GridColumnHeader>
+
+    <GridRow Context="invoiceRow">
+        <div class="col">
+            @invoiceRow.IdRow
+        </div>
+        <div class="col">
+            @invoiceRow.Description
+        </div>
+        <div class="col">
+            @invoiceRow.Qta
+        </div>
+        <div class="col">
+            @invoiceRow.Price
+        </div>
+    </GridRow>
+    <GridFooter>
+        <div class="col-12">
+            Total: @GetTotaleInvoce()
+        </div>
+    </GridFooter>
+</GridTemplate>
